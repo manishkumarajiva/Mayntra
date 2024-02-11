@@ -7,25 +7,23 @@ const cloudinary = require('cloudinary');
 const PORT = process.env.PORT || 3000;
 
 connectDB().then(() => {
-    console.log("Database Connected Successfully");
+  console.log("Database Connected Successfully");
 }).catch((err) => {
-    console.log("Database Connection Error \n", err.message);
+  console.log("Database Connection Error \n", err.message);
 });
 
 
 
-cloudinary.config({ 
-  cloud_name: "dem0ykgrw", 
-  api_key: 557386554636936, 
-  api_secret: "pjodRfEqcY5skagSKgVrMBydw5c" ,
-  secure : true
+cloudinary.config({
+  cloud_name: "dem0ykgrw",
+  api_key: 557386554636936,
+  api_secret: "pjodRfEqcY5skagSKgVrMBydw5c",
+  secure: true
 });
 
 
 
 app.listen(PORT, () => console.log(`Express listening on port ${PORT}`));
-
-
 
 
 
